@@ -6,7 +6,7 @@
 /*   By: vnanga <vnanga@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:32:34 by vnanga            #+#    #+#             */
-/*   Updated: 2026/06/05 14:20:46 by vnanga           ###   ########.fr       */
+/*   Updated: 2026/06/05 14:43:29 by vnanga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <linux/joystick.h>
 
 
@@ -29,7 +30,7 @@ typedef struct s_joystick{
 } t_joystick;
 
 t_joystick  *js_init(const char *device_path);
-int         js_update(t_joystick *js);
-void        js_close(t_joystick *js);
+int         js_update(t_joystick *init);
+void        js_close(t_joystick *init);
 
 #endif
